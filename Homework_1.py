@@ -1,5 +1,5 @@
-# Name:
-# SBUID: 
+# Name:Jeewoo Lim
+# SBUID: 115236466
 
 # Remove the ellipses (...) when writing your solutions.
 
@@ -7,41 +7,83 @@
 # ----------------- Convert Fahrenheit to Celsius -------------------------------
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
 
-def fahrenheit2celsius(fahrenheit): 
-   ...
+def farenheit2celsius(farenheit):
 
-def what_to_wear(celsius):
-   ...
+    celsius = (5/9) * (farenheit - 32)
+
+    return celsius
+
+def what_to_wear (celsius):
+    if celsius < -10:
+        print('Puffy jacket')
+    if -10 <= celsius <= 0:
+        print('Scarf')
+    if 0 < celsius <= 10:
+        print("sweater")
+    if 10 < celsius <= 20:
+        print("Light jacket")
+    if 20 < celsius:
+        print('T-shirt')
+
+farenheit=40
+what_to_wear(farenheit2celsius(farenheit))
+
 
 # ---------------------------- Exercise II --------------------------------------
 # ----------------- Area and perimeter of a triangle  ---------------------------
 # TODO: Fill the functions shoelace_triangle_area, euclidean_distance and
 # compute_triangle_perimeter from scratch  
 
-def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    ...
+def shoelace_triangle_area(x1,x2,x3,y1,y2,y3):
 
-def euclidean_distance(x1, y1, x2, y2):
-    ...
+    result = abs(((x1*y2 + x2*y3 + x3*y1)-(x1*y3 + x2*y1 + x3*y2))/2)
 
-def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    ...
+    return result
 
+def euclidean_distance(x1, x2, y1, y2):
+    d = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+
+    return d
+
+x1= -4
+x2= -5
+x3= 3
+y1= -4
+y2= 5
+y3= -3
+
+print(euclidean_distance(x1, x3, y1, y3))
+print(shoelace_triangle_area(x1, x2, x3, y1, y2, y3))
+
+def compute_triangle_perimeter(x1, x2, x3, y1, y2, y3):
+    s1= euclidean_distance(x1, x2, y1, y2)
+    s2= euclidean_distance(x2, x3, y2, y3)
+    s3= euclidean_distance(x1, x3, y1, y3)
+    p= s1+s2+s3
+    return p
+print(compute_triangle_perimeter(x1, x2, x3, y1, y2, y3))
 
 # ---------------------------- Exercise III -------------------------------------
 # ----------------- Compute the area of a regular polygon -----------------------
 # TODO: Fill the functions deg2rad, apothem  and polygon_area 
 
 
-def deg2rad(deg):
-    ...
+import math
+def deg2rad(n):
+   m=n*(math.pi/180)
+   return m
 
-def apothem(number_sides, length_side):
-   ...
+def apothem(n, s):
+    a = s / (2*math.tan((deg2rad(180/n))))
+    return a
 
-def polygon_area(number_sides, length_side):
-   ...
+def polygon_area(n,s):
+    A = (n*s*apothem(n, s))/2
+    return A
 
+length_side=4
+number_sides=5
+print(polygon_area(number_sides, length_side))
 
 # ---------------------------- Test -------------------------------------
 # The following lines are for testing purposes, and will not be part of
@@ -61,4 +103,3 @@ print("The area of the triangle is : " + str(area) + " , its perimeter is : " + 
 number_sides = 5
 length_side = 4
 print ("The area of the polygon is : " + str(polygon_area(number_sides, length_side)))
-
