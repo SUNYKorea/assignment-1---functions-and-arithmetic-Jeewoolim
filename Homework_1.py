@@ -1,11 +1,25 @@
 # Name:Jeewoo Lim
 # SBUID: 115236466
-
+##################### SCORE ######################
+#######  Score:  2/10
+#################################################
 # Remove the ellipses (...) when writing your solutions.
 
 # ---------------------------- Exercise I ---------------------------------------
 # ----------------- Convert Fahrenheit to Celsius -------------------------------
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
+
+## your output  -> did not run for the test
+
+# sweater
+# 7.0710678118654755
+# 32.0
+# 27.440161448987652
+# 27.527638409423474
+# Traceback (most recent call last):
+#   File "d:\CSE 101 Ass1\Assignment 1 - Functions and Arithmetic-04-05-2023-05-19-27\Jeewoolim\Homework_1.py", line 94, in <module>
+#     what_to_wear(fahrenheit2celsius(fahrenheit))
+# NameError: name 'fahrenheit2celsius' is not defined
 
 def farenheit2celsius(farenheit):
 
