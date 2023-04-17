@@ -1,7 +1,7 @@
 # Name:Jeewoo Lim
 # SBUID: 115236466
 ##################### SCORE ######################
-#######  Score:  2/10
+#######  Score:  7/10
 #################################################
 # Remove the ellipses (...) when writing your solutions.
 
